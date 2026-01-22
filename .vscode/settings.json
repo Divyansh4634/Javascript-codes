@@ -1,3 +1,4 @@
 {
-  "liveServer.settings.multiRootWorkspaceName": "chai developer"
+  "liveServer.settings.multiRootWorkspaceName": "chai developer",
+  "liveServer.settings.port": 5501
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      background-color: rgb(9, 17, 62);
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      color: #5cf7e0;
+    }
+    label {
+      color: rgb(251, 59, 126);
+      font-weight: bold;
+    }
+    #box {
+      width: 300px;
+      padding: 20px;
+      margin: 100px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(48, 225, 101, 0.6);
+      background-color: #fff;
+      transition: background-color 0.7s ease;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .input-box {
+      position: relative;
+    }
+    .eye {
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 18px;
+      color: #666;
+    }
+    button {
+      background-color: rgb(178, 116, 254);
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 50px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: rgb(150, 90, 230);
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <center>
+      <h2><i>Login</i></h2>
+      <form action="/server" method="get">
+        <label for="fname">📧 E-mail</label><br>
+        <input type="email" placeholder="Enter E-mail or phone number" name="email" id="fname" required><br>
+
+        <label for="pass">🔒 Password</label><br>
+        <div class="input-box">
+          <input type="password" placeholder="Enter password" name="pswd" id="pass" required>
+          <span class="eye" onclick="togglePassword()">👁️</span>
+        </div><br>
+
+        <button type="submit"><b>Submit</b></button>
+      </form>
+    </center>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passField = document.getElementById("pass");
+      if (passField.type === "password") {
+        passField.type = "text";
+      } else {
+        passField.type = "password";
+      }
+    }
+  </script>
+</body>
+</html>

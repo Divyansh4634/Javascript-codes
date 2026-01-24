@@ -14,7 +14,7 @@ const newstring="                  Naitik-Mishra-ji     ";
 // console.log(newstring.replace('-','%20'));//phela - badlega saare - hatane hai to( /-/g )console.log(newstring.replace(/-/g, '%20'));
 // console.log(newstring.includes("j"));//hai ki nahiiii
 // console.log(newstring.split('-'));//- poori string seperate hoti hai
-console.log(newstring.length);
+
 
 
 
